@@ -1,0 +1,72 @@
+// First file that runs after index.html is loaded
+// in the browser
+
+// Step-1: Import the React and ReactDOM libraries 
+// Library that defines what a component is, and how 
+// multiple components work together
+import React from "react";
+// Library that known how to get a component
+// to show up in the browser
+import ReactDOM from "react-dom/client";
+
+// Step-2: Get a refrence to the div with ID root
+const element = document.getElementById("root");
+
+// Step-3: Tell React to take control of that element
+const root = ReactDOM.createRoot(element);
+
+// Step-4: Create a component
+function App() {
+    // let message = 'Bye there!';
+    // if (Math.random() > 0.5) {
+    //     message =  'Hello there!';
+    // }
+
+    // Ex: 1
+    // Only variables containing string or number
+    // is rendered by React using {}. If a Boolean /
+    // Undefined / Null / error on object value
+    // containing variable is rendered, react does
+    // not know how to render it.
+    // message = true; --> No output
+    // message = false; --> No output
+    // message = undefined / null; --> No output
+    // message = [1, 2, 3]; --> Output 123 (Prints all the element one by one without a separator)
+    // message = {}; --> Error in console: Objects are not valid as a React child
+
+    // Ex: 2
+    // const date = new Date();
+    // const time = date.toLocaleTimeString();
+
+    // return <h1>{time}</h1>
+
+    // Alternate condensed code:
+    // return <h1>{new Date().toLocaleTimeString()}</h1>
+
+    // Ex: 3
+    // const name = 'Ranajoy';
+    // const age = 26;
+
+    // return (
+    //     <h1>
+    //         Hi, name is {name} and my age is {age}
+    //     </h1>
+    // );
+
+    // Ex. 4
+    // const inputType = "number";
+    // const minValue = 5;
+
+    // return <input type={inputType} min={minValue}/>;
+
+    // return <input type="number" min={5} style={{ border: '3px solid red' }}/>;
+
+    // return <textarea autoFocus={true} spellCheck style={{border: '1px solid blue'}}></textarea>;
+
+    return (
+        <input placeholder="hi there" />
+      );
+}
+
+// Step-5: Show the component on the screen
+root.render(<App />);
